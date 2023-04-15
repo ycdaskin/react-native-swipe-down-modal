@@ -1,0 +1,27 @@
+{
+  "name": "react-native-swipe-down-modal",
+  "version": "1.0.0",
+  "description": "Swipable bottom drawer component like Instagram's comment component.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo “Warning: no test specified\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ycdaskin/react-native-swipe-down-modal.git"
+  },
+  "keywords": [
+    "swipe",
+    "down",
+    "swipable",
+    "modal",
+    "bottom",
+    "drawer"
+  ],
+  "author": "Çağrı Daşkın",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ycdaskin/react-native-swipe-down-modal/issues"
+  },
+  "homepage": "https://github.com/ycdaskin/react-native-swipe-down-modal#readme"
+}
