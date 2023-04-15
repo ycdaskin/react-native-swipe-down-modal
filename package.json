@@ -23,5 +23,8 @@
   "bugs": {
     "url": "https://github.com/ycdaskin/react-native-swipe-down-modal/issues"
   },
-  "homepage": "https://github.com/ycdaskin/react-native-swipe-down-modal#readme"
+  "homepage": "https://github.com/ycdaskin/react-native-swipe-down-modal#readme",
+  "devDependencies": {
+    "metro-react-native-babel-preset": "^0.76.2"
+  }
 }
