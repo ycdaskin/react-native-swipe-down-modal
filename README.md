@@ -140,12 +140,17 @@ export default SwipeDownTestScreen
                     
 Prop | Type | default | Description 
 ------------- | ------------- | ------------- | -------------
-duration  | Number | 200 | Duration of swipe animation in milliseconds
+duration  | number | 200 | Duration of swipe animation in milliseconds
 onClose  | func | () => null | The function will be called after the modal closed
-customHeader  | React Element | null | Custom header element 
-visible  | Boolean | false | Modal visibility
-swipeThreshold  | Number | 15 | Minimum dy value to trigger swipe animation
-marginTop  | Number | 71 | Margin to top of the screen. See image description. 
+customHeader  | react element | null | Custom header element 
+visible  | boolean | false | Modal visibility
+swipeThreshold  | number | 15 | Minimum dy value to trigger swipe animation
+marginTop  | number | 71 | Margin to top of the screen. See image description. If you want to give certain height you can calculate it like this: marginTop={Dimensions.get("screen").height - yourHeight} 
 swipableHeight | number | height of header component | Height of the area capturing the swipe. Outside of this area will not capture finger moves. See image description
-backgroundColor | Color string | 'rgba(0, 0, 0, .9)' | Color of the empty area between the modal body and the top of the screen
-headerHeight | Number | 40 | Height of the default header. This prop will take effect only if customHeader prop is null 
+backgroundColor | color string | 'rgba(0, 0, 0, .9)' | Color of the empty area between the modal body and the top of the screen
+headerHeight | number | 40 | Height of the default header. This prop will take effect only if customHeader prop is null 
+
+
+# Image description
+
+![Adsız drawio (3)](https://user-images.githubusercontent.com/41010080/232230651-56db4379-55bf-4257-828c-53251f073df7.png)
