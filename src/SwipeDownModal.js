@@ -18,7 +18,7 @@ const { height } = Dimensions.get("window");
 
 const SwipeDownModal = ({
     duration = 200,
-    onClose,
+    onClose = () => null,
     customHeader,
     visible,
     children,
@@ -27,7 +27,9 @@ const SwipeDownModal = ({
     swipableHeight = 40,
     backgroundColor = 'rgba(0, 0, 0, .9)',
     headerHeight = 40,
-    drawerBackgroundColor = "#ffffff"
+    drawerBackgroundColor = "#ffffff",
+    borderTopRadius = 38,
+    swipeDisabled = false
 }) => {
     const TIMING_CONFIG = {
         duration: duration,
@@ -44,9 +46,7 @@ const SwipeDownModal = ({
 
     const handleOnClose = () => {
         setModalVisible(false)
-        if (onClose) {
-            onClose()
-        }
+        onClose()
     }
 
     const pan = useRef(new Animated.ValueXY()).current;
@@ -67,7 +67,7 @@ const SwipeDownModal = ({
             onStartShouldSetPanResponder: () => false,
             onStartShouldSetPanResponderCapture: () => false,
             onMoveShouldSetPanResponder: (evt, gestureState) => {
-                if (isAnimating) {
+                if (swipeDisabled || isAnimating) {
                     return false;
                 }
                 const startingY = gestureState.moveY - gestureState.dy
@@ -171,8 +171,8 @@ const SwipeDownModal = ({
                     opacity: opacity,
                     marginTop: marginTop,
                     backgroundColor: drawerBackgroundColor,
-                    borderTopLeftRadius: 38,
-                    borderTopRightRadius: 38,
+                    borderTopLeftRadius: borderTopRadius,
+                    borderTopRightRadius: borderTopRadius,
                     
                 },
             ],
@@ -239,7 +239,10 @@ const SwipeDownModal = ({
                         <ImageBackground style={{
                             width: '100%',
                             height:'100%',
-                            paddingTop: headerH
+                            paddingTop: headerH,
+                            backgroundColor: drawerBackgroundColor,
+                            borderTopLeftRadius: borderTopRadius,
+                            borderTopRightRadius: borderTopRadius
                         }} >
                             {children}
                         </ImageBackground>
@@ -288,10 +291,10 @@ const styles = StyleSheet.create({
         overflow: 'hidden'
     },
     containerModal: {
-        flex: 1
+        flex: 1,
     },
     touchable: {
-        flex: 1
+        flex: 1,
     },
 });
 
