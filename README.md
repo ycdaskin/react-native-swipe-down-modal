@@ -113,8 +113,7 @@ const SwipeDownTestScreen = () => {
                     style={{
                         justifyContent: 'center',
                         alignItems: 'center',
-                        flex: 1,
-                        backgroundColor: 'white'
+                        flex: 1
                     }}>
                     <Text>Hello world</Text>
                 </View>
