@@ -61,7 +61,7 @@ export default SwipeDownTestScreen;
 
 
 
-# Using customized header and closing programmatically
+# Using customized header, customized style and closing programmatically
 
 
 ```javascript
@@ -74,12 +74,17 @@ const SwipeDownTestScreen = () => {
             <SwipeDownModal
                 visible={visible}
                 onClose={() => setVisible(false)}
+                backgroundColor={'rgba(0,0,0,.5)'}
+                drawerBackgroundColor={'green'}
+                borderTopRadius={20}
+                swipeDisabled={true}
+                marginTop={Dimensions.get("screen").height - 500}
                 customHeader={
                     <View
                         style={{
                             height: 70,
                             padding: 10,
-                            borderBottomColor: 'red',
+                            borderBottomColor: 'yellow',
                             borderBottomWidth: 3,
                             alignItems: 'center',
                             justifyContent: 'center'
@@ -129,9 +134,9 @@ export default SwipeDownTestScreen
 ```
 
 
-![swipe-down-custom-header-demo](https://user-images.githubusercontent.com/41010080/232225988-510feecb-4c8a-4502-aa13-87c54cb6dc9e.gif)
 
 
+![Ekran_Kaydı_2023-04-18_14_00_42_AdobeExpress](https://user-images.githubusercontent.com/41010080/232758351-bd7547fc-dbc8-4a86-b13f-3770c1deb99e.gif)
 
 
 
@@ -149,6 +154,9 @@ marginTop  | number | 71 | Margin to top of the screen. See image description. I
 swipableHeight | number | height of header component | Height of the area capturing the swipe. Outside of this area will not capture finger moves. See image description
 backgroundColor | color string | 'rgba(0, 0, 0, .9)' | Color of the empty area between the modal body and the top of the screen
 headerHeight | number | 40 | Height of the default header. This prop will take effect only if customHeader prop is null 
+borderTopRadius | number | 38 | Border top right and left radius of drawer section
+swipeDisabled | boolean | false | When true, finger moves will not be captured
+
 
 
 # Image description
