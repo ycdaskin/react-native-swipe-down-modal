@@ -1,5 +1,5 @@
 
-# react-native-swipe-modal-up-down
+# react-native-swipe-down-modal
 Swipable bottom drawer component like Instagram's comment component.
 
   - Easy to use
@@ -18,7 +18,7 @@ Originated to this package: react-native-swipe-modal-up-down
 
 # Getting Started
 ```sh
-$ npm install react-native-swipe-modal-up-down
+$ npm install react-native-swipe-down-modal
 ```
 
 # Usage
