@@ -23,7 +23,7 @@ $ npm install react-native-swipe-down-modal
 
 # Usage
 ```sh
-import SwipeDownModal from 'react-native-swipe-down-modal';
+import { SwipeDownModal } from 'react-native-swipe-down-modal'
 ```
 
 ```javascript
